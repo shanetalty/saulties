@@ -4,52 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awards Website</title>
-    
-    <!-- Import Model Viewer Component -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-    
     <link rel="stylesheet" href="styles.css">
+    <!-- Importing Model-Viewer for 3D models -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
     <div class="main-page">
-        <img src="moonsaultieslogo.png" alt="Logo" class="logo">
+        <img src="moonsaultieslogo.png" alt="Moonsaulties Logo" class="logo">
         <div class="scroll-icon">&#8595;</div>
     </div>
-
-    <!-- 3rd Place Section -->
-    <div class="award-section" id="third-place">
+    
+    <!-- Event of the Year - 3rd Place -->
+    <section class="award-section" id="third-place">
         <div class="text">
             <h1>EVENT OF THE YEAR</h1>
             <h2>3RD PLACE</h2>
         </div>
         <div class="model-container">
-            <model-viewer alt="3rd place award" src="card1.glb" camera-controls touch-action="pan-y"></model-viewer>
+            <model-viewer src="card1.glb" alt="3D Model for 3rd Place" camera-controls></model-viewer>
         </div>
-    </div>
+    </section>
 
-    <!-- 2nd Place Section -->
-    <div class="award-section" id="second-place">
+    <!-- Event of the Year - 2nd Place -->
+    <section class="award-section" id="second-place">
         <div class="text">
             <h1>EVENT OF THE YEAR</h1>
             <h2>2ND PLACE</h2>
         </div>
         <div class="model-container">
-            <model-viewer alt="2nd place award" src="card2.glb" camera-controls touch-action="pan-y"></model-viewer>
+            <model-viewer src="card2.glb" alt="3D Model for 2nd Place" camera-controls></model-viewer>
         </div>
-    </div>
+    </section>
 
-    <!-- 1st Place Section -->
-    <div class="award-section" id="first-place">
+    <!-- Event of the Year - 1st Place -->
+    <section class="award-section" id="first-place">
         <div class="text">
             <h1>EVENT OF THE YEAR</h1>
             <h2>1ST PLACE</h2>
         </div>
         <div class="model-container">
-            <model-viewer alt="1st place award" src="card3.glb" camera-controls touch-action="pan-y"></model-viewer>
+            <model-viewer src="card3.glb" alt="3D Model for 1st Place" camera-controls></model-viewer>
         </div>
-    </div>
-
-    <!-- Link to the external JavaScript file -->
-    <script src="script.js"></script>
+    </section>
 </body>
 </html>
