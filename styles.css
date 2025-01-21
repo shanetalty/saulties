@@ -7,9 +7,9 @@ body, html {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Main page gradient with specified colors */
+/* Main page - gradient background */
 .main-page {
-    background: linear-gradient(45deg, #FFFFFF, #000000, #E96DE8, #771797, #290543);
+    background: linear-gradient(45deg, #FFFFFF, #000000, #E69DE8, #771797, #290543);
     background-size: 400% 400%; /* Make the gradient larger for a smoother effect */
     animation: gradientMove 5s linear infinite; /* Faster movement (5s) */
     display: flex;
@@ -18,9 +18,9 @@ body, html {
     height: 100vh;
     text-align: center;
     flex-direction: column;
-    position: relative;
 }
 
+/* Gradient animation for smoother movement */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     25% { background-position: 50% 0%; }
