@@ -129,21 +129,6 @@ body, html {
     height: 80%;
 }
 
-/* Rotation icon under the models */
-.model-container .rotate-icon {
-    position: absolute;
-    bottom: 10px;
-    font-size: 36px;
-    color: black;
-    animation: rotateIcon 2s linear infinite;
-    cursor: pointer;
-}
-
-@keyframes rotateIcon {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 /* Mobile Optimization */
 @media only screen and (max-width: 768px) {
     /* Make the award section stack vertically */
