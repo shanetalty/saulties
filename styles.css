@@ -17,6 +17,7 @@ body, html {
     height: 100vh;
     text-align: center;
     flex-direction: column;
+    position: relative;
 }
 
 @keyframes gradientMove {
@@ -25,8 +26,17 @@ body, html {
     100% { background: linear-gradient(45deg, #FFFFFF, #000000, #E96DE8, #771797, #290543); }
 }
 
+/* Make the logo 4x bigger */
 .logo {
-    width: 300px;
+    width: 1200px; /* 4x bigger */
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+/* Animation for logo scaling (optional effect) */
+@keyframes logoPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 .scroll-icon {
