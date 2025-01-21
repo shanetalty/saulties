@@ -1,12 +1,14 @@
+/* General body styling */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(180deg, #6a0dad, #ffffff);
-  overflow: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
+/* Page section styling */
 .page {
   display: flex;
   flex-direction: column;
@@ -15,6 +17,8 @@ body {
   height: 100vh;
   text-align: center;
   color: white;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
 }
 
 h1 {
@@ -23,19 +27,23 @@ h1 {
   text-transform: uppercase;
 }
 
+/* Model viewer styles */
 model-viewer {
   width: 70%;
   height: 60%;
 }
 
+/* Scroll indicator styling */
 .scroll-indicator {
   position: absolute;
   bottom: 10px;
   font-size: 2rem;
   animation: bounce 2s infinite;
   color: white;
+  cursor: pointer;
 }
 
+/* Bounce animation for scroll indicator */
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
