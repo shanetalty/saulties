@@ -1,41 +1,29 @@
-// Smooth fade-out and fade-in effect during scrolling
-document.addEventListener("scroll", () => {
-  const pages = document.querySelectorAll(".page");
-  const scrollTop = window.pageYOffset;
-  const windowHeight = window.innerHeight;
+// Function to scroll to the specified section
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  section.scrollIntoView({ behavior: 'smooth' });
+}
 
-  pages.forEach((page) => {
-    const offsetTop = page.offsetTop;
-    const opacity = 1 - Math.abs(scrollTop - offsetTop) / windowHeight;
+// Function to handle scroll navigation between pages
+function scrollToNextSection() {
+  const nextSection = document.querySelector('.award-page.active + .award-page');
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
-    page.style.opacity = opacity;
-  });
-});
+// Add event listeners for scrolling and fade effects
+let currentPage = 0;
+const pages = document.querySelectorAll('.award-page');
 
-// Add model-viewer interactions
-document.querySelectorAll('model-viewer').forEach((viewer) => {
-  // Add a click event listener to trigger the animation
-  viewer.addEventListener('click', () => {
-    if (!viewer.hasAttribute('autoplay')) {
-      viewer.setAttribute('autoplay', ''); // Start animation
-      viewer.play(); // Explicitly play
-    }
-  });
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
 
-  // Listen for the animationfinished event
-  viewer.addEventListener('animationfinished', () => {
-    viewer.removeAttribute('autoplay'); // Stop animation loop
-    viewer.setAttribute('camera-controls', ''); // Enable user rotation
-    console.log(`${viewer.id}: Animation complete. Rotation enabled.`);
-  });
-});
-
-// Scroll to the next section when the scroll indicator is clicked
-document.querySelectorAll(".scroll-indicator").forEach((indicator, index) => {
-  indicator.addEventListener("click", () => {
-    const nextPage = document.querySelectorAll(".page")[index + 1];
-    if (nextPage) {
-      nextPage.scrollIntoView({ behavior: "smooth" });
+  pages.forEach((page, index) => {
+    if (scrollPosition >= page.offsetTop - window.innerHeight / 2) {
+      page.classList.add('active');
+    } else {
+      page.classList.remove('active');
     }
   });
 });
