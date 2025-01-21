@@ -111,8 +111,18 @@ body, html {
 }
 
 #first-place {
-    background-color: #FFD700;  /* Solid gold */
+    background: linear-gradient(45deg, #DAA520, #FFD700, #B8860B); /* Richer gold gradient */
+    background-size: 200% 200%; /* Enhance the gradient size for smoothness */
+    animation: goldGradientMove 6s linear infinite; /* Subtle movement */
 }
+
+/* Optional animation for the gradient */
+@keyframes goldGradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 
 #first-place .model-container model-viewer {
     width: 80%;
