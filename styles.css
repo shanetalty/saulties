@@ -10,15 +10,14 @@ body, html {
 /* Main page - gradient background */
 .main-page {
     background: linear-gradient(45deg, #FFFFFF, #000000, #E69DE8, #771797, #290543);
-    background-size: 400% 400%; /* Make the gradient larger for a smoother effect */
-    animation: gradientMove 5s linear infinite; /* Faster movement (5s) */
+    background-size: 400% 400%;
+    animation: gradientMove 5s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
     flex-direction: column;
-    padding: 20px; /* Add padding for mobile devices */
 }
 
 /* Gradient animation for smoother movement */
@@ -30,68 +29,63 @@ body, html {
     100% { background-position: 0% 50%; }
 }
 
-/* Make the logo responsive */
+/* Logo styling */
 .logo {
-    width: 100%; /* Adjust to screen size */
-    max-width: 300px; /* Limit size on mobile */
-    animation: logoPulse 4s ease-in-out infinite; /* Slower pulse */
+    width: 1200px;
+    animation: logoPulse 4s ease-in-out infinite;
 }
 
-/* Animation for logo scaling (subtle effect) */
+/* Animation for subtle logo scaling */
 @keyframes logoPulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.02); } /* Reduced scaling */
+    50% { transform: scale(1.02); }
     100% { transform: scale(1); }
 }
 
+/* Scroll icon styling */
 .scroll-icon {
-    font-size: 20px; /* Smaller size for mobile */
-    margin-top: 10px;
+    font-size: 30px;
+    margin-top: 20px;
     cursor: pointer;
 }
 
-/* Scroll arrow animation */
 .scroll-icon:hover {
     transform: translateY(10px);
 }
 
-/* Award section (full screen, adjusted for mobile) */
+/* Award sections */
 .award-section {
     display: flex;
-    flex-direction: column; /* Stack text and model vertically */
     height: 100vh;
     align-items: center;
-    justify-content: flex-start; /* Align content at the top */
+    justify-content: center;
     position: relative;
-    padding: 20px; /* Add padding for spacing */
 }
 
-/* Text box at the top */
+/* Text box styling */
 .award-section .text {
-    width: 100%;
+    width: 66.67%;
+    background-color: white;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px; /* Add spacing between text and model */
 }
 
 .award-section h1 {
     font-weight: bold;
-    font-size: 2rem; /* Smaller font size for mobile */
+    font-size: 3rem;
     color: black;
-    margin: 10px 0; /* Add spacing */
 }
 
 .award-section h2 {
     font-weight: bold;
-    font-size: 1.5rem; /* Smaller font size for mobile */
+    font-size: 2rem;
     color: black;
-    margin: 5px 0;
 }
 
-/* Model container (big focus on mobile) */
+/* Model container */
 .award-section .model-container {
-    width: 100%;
-    height: auto;
-    max-width: 400px; /* Limit size */
+    width: 33.33%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,35 +93,45 @@ body, html {
 
 /* Award section colors */
 #third-place {
-    background-color: #8C4D26;  /* Solid bronze */
+    background-color: #8C4D26;
 }
 
 #second-place {
-    background-color: #C0C0C0;  /* Solid silver */
+    background-color: #C0C0C0;
 }
 
 #first-place {
-    background-color: #DAA520;  /* Richer gold */
+    background-color: #DAA520;
 }
 
-/* Responsive design adjustments */
+/* Responsive design for mobile */
 @media (max-width: 768px) {
+    /* Main page */
     .main-page {
         flex-direction: column;
         padding: 10px;
     }
 
     .logo {
-        max-width: 200px; /* Smaller logo for smaller screens */
+        width: 100%;
+        max-width: 300px; /* Smaller logo for mobile */
     }
 
     .scroll-icon {
-        font-size: 16px;
-        margin-top: 5px;
+        font-size: 20px;
+        margin-top: 10px;
     }
 
+    /* Award sections */
     .award-section {
-        padding: 10px;
+        flex-direction: column; /* Stack text and model vertically */
+        justify-content: flex-start; /* Align content at the top */
+        padding: 20px;
+    }
+
+    .award-section .text {
+        width: 100%;
+        margin-bottom: 20px; /* Add spacing below the text */
     }
 
     .award-section h1 {
@@ -139,6 +143,8 @@ body, html {
     }
 
     .award-section .model-container {
-        max-width: 300px; /* Limit model size further for smaller screens */
+        width: 100%; /* Model takes full width */
+        height: auto;
+        max-width: 400px; /* Limit size for smaller screens */
     }
 }
