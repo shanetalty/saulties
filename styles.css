@@ -7,11 +7,11 @@ body, html {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Main page - gold and black gradient animation */
+/* Main page - white and gold gradient animation */
 .main-page {
-    background: linear-gradient(45deg, gold, black);
+    background: linear-gradient(45deg, white, gold);
     background-size: 400% 400%; /* Make the gradient larger for a smoother effect */
-    animation: gradientMove 15s linear infinite;
+    animation: gradientMove 5s linear infinite; /* Faster movement (5s) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,14 +84,14 @@ body, html {
     align-items: center;
 }
 
-/* 3rd place - bronze and black gradient animation */
+/* 3rd place - white and gold gradient animation */
 #third-place {
-    background: linear-gradient(45deg, #8c4d26, black);
+    background: linear-gradient(45deg, white, gold);
     background-size: 400% 400%;
-    animation: gradientMoveBronze 15s linear infinite;
+    animation: gradientMoveThird 5s linear infinite;
 }
 
-@keyframes gradientMoveBronze {
+@keyframes gradientMoveThird {
     0% { background-position: 0% 50%; }
     25% { background-position: 50% 0%; }
     50% { background-position: 100% 50%; }
@@ -104,14 +104,14 @@ body, html {
     height: 80%;
 }
 
-/* 2nd place - silver and black gradient animation */
+/* 2nd place - white and gold gradient animation */
 #second-place {
-    background: linear-gradient(45deg, silver, black);
+    background: linear-gradient(45deg, white, gold);
     background-size: 400% 400%;
-    animation: gradientMoveSilver 15s linear infinite;
+    animation: gradientMoveSecond 5s linear infinite;
 }
 
-@keyframes gradientMoveSilver {
+@keyframes gradientMoveSecond {
     0% { background-position: 0% 50%; }
     25% { background-position: 50% 0%; }
     50% { background-position: 100% 50%; }
@@ -124,14 +124,14 @@ body, html {
     height: 80%;
 }
 
-/* 1st place - gold and black gradient animation */
+/* 1st place - white and gold gradient animation */
 #first-place {
-    background: linear-gradient(45deg, gold, black);
+    background: linear-gradient(45deg, white, gold);
     background-size: 400% 400%;
-    animation: gradientMoveGold 15s linear infinite;
+    animation: gradientMoveFirst 5s linear infinite;
 }
 
-@keyframes gradientMoveGold {
+@keyframes gradientMoveFirst {
     0% { background-position: 0% 50%; }
     25% { background-position: 50% 0%; }
     50% { background-position: 100% 50%; }
