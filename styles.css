@@ -7,11 +7,11 @@ body, html {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Main page - gold and black gradient animation */
+/* Main page - white and gold gradient animation */
 .main-page {
-    background: linear-gradient(45deg, gold, black);
+    background: linear-gradient(45deg, white, gold);
     background-size: 400% 400%; /* Make the gradient larger for a smoother effect */
-    animation: gradientMove 15s linear infinite;
+    animation: gradientMove 8s linear infinite;  /* Faster movement */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,16 +82,17 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-/* 3rd place - bronze and black gradient animation */
+/* 3rd place - white and gold gradient animation */
 #third-place {
-    background: linear-gradient(45deg, #8c4d26, black);
+    background: linear-gradient(45deg, white, gold);
     background-size: 400% 400%;
-    animation: gradientMoveBronze 15s linear infinite;
+    animation: gradientMoveGold 8s linear infinite;
 }
 
-@keyframes gradientMoveBronze {
+@keyframes gradientMoveGold {
     0% { background-position: 0% 50%; }
     25% { background-position: 50% 0%; }
     50% { background-position: 100% 50%; }
@@ -104,19 +105,11 @@ body, html {
     height: 80%;
 }
 
-/* 2nd place - silver and black gradient animation */
+/* 2nd place - white and gold gradient animation */
 #second-place {
-    background: linear-gradient(45deg, silver, black);
+    background: linear-gradient(45deg, white, gold);
     background-size: 400% 400%;
-    animation: gradientMoveSilver 15s linear infinite;
-}
-
-@keyframes gradientMoveSilver {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 0%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
+    animation: gradientMoveGold 8s linear infinite;
 }
 
 #second-place .model-container model-viewer {
@@ -124,24 +117,31 @@ body, html {
     height: 80%;
 }
 
-/* 1st place - gold and black gradient animation */
+/* 1st place - white and gold gradient animation */
 #first-place {
-    background: linear-gradient(45deg, gold, black);
+    background: linear-gradient(45deg, white, gold);
     background-size: 400% 400%;
-    animation: gradientMoveGold 15s linear infinite;
-}
-
-@keyframes gradientMoveGold {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 0%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
+    animation: gradientMoveGold 8s linear infinite;
 }
 
 #first-place .model-container model-viewer {
     width: 80%;
     height: 80%;
+}
+
+/* Rotation icon under the models */
+.model-container .rotate-icon {
+    position: absolute;
+    bottom: 10px;
+    font-size: 36px;
+    color: black;
+    animation: rotateIcon 2s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes rotateIcon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Mobile Optimization */
