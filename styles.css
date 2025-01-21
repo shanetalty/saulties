@@ -7,7 +7,7 @@ body, html {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Main page - white to black gradient, with requested colors */
+/* Main page - gradient background */
 .main-page {
     background: linear-gradient(45deg, #FFFFFF, #000000, #E69DE8, #771797, #290543);
     background-size: 400% 400%; /* Make the gradient larger for a smoother effect */
@@ -28,7 +28,7 @@ body, html {
     100% { background-position: 0% 50%; }
 }
 
-/* Logo - 4x bigger size */
+/* Logo */
 .logo {
     width: 1200px;  /* Increased from 300px to 1200px */
 }
@@ -53,8 +53,6 @@ body, html {
     justify-content: center;
     position: relative;
     flex-direction: row;
-    opacity: 0; /* Sections start invisible */
-    transition: opacity 1s ease-in-out; /* Fade transition */
 }
 
 /* The left part (2/3) with white background for text */
@@ -85,7 +83,7 @@ body, html {
     align-items: center;
 }
 
-/* Background color for each award section */
+/* Award section backgrounds */
 #third-place {
     background-color: #cd7f32; /* Bronze */
 }
@@ -150,9 +148,4 @@ body, html {
     .scroll-icon {
         font-size: 24px;  /* Smaller scroll icon */
     }
-}
-
-/* Fade-in effect on scroll */
-.award-section.visible {
-    opacity: 1;
 }
