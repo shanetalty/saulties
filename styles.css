@@ -10,7 +10,8 @@ body, html {
 /* Main page gradient with specified colors */
 .main-page {
     background: linear-gradient(45deg, #FFFFFF, #000000, #E96DE8, #771797, #290543);
-    animation: gradientMove 30s linear infinite; /* Increased duration and smoother transition */
+    background-size: 400% 400%; /* Make the gradient larger for a smoother effect */
+    animation: gradientMove 5s linear infinite; /* Faster movement (5s) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,21 +22,11 @@ body, html {
 }
 
 @keyframes gradientMove {
-    0% {
-        background: linear-gradient(45deg, #FFFFFF, #000000, #E96DE8, #771797, #290543);
-    }
-    25% {
-        background: linear-gradient(45deg, #290543, #771797, #E96DE8, #000000, #FFFFFF);
-    }
-    50% {
-        background: linear-gradient(45deg, #000000, #E96DE8, #771797, #290543, #FFFFFF);
-    }
-    75% {
-        background: linear-gradient(45deg, #771797, #290543, #E96DE8, #FFFFFF, #000000);
-    }
-    100% {
-        background: linear-gradient(45deg, #FFFFFF, #000000, #E96DE8, #771797, #290543);
-    }
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 0%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 100%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Make the logo 4x bigger */
@@ -47,7 +38,7 @@ body, html {
 /* Animation for logo scaling (subtle effect) */
 @keyframes logoPulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.01); } /* Reduced scaling */
+    50% { transform: scale(1.02); } /* Reduced scaling */
     100% { transform: scale(1); }
 }
 
