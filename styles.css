@@ -7,9 +7,9 @@ body, html {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Main page - white and gold gradient animation */
+/* Main page - white to black gradient, with requested colors */
 .main-page {
-    background: linear-gradient(45deg, white, gold);
+    background: linear-gradient(45deg, #FFFFFF, #000000, #E69DE8, #771797, #290543);
     background-size: 400% 400%; /* Make the gradient larger for a smoother effect */
     animation: gradientMove 5s linear infinite; /* Faster movement (5s) */
     display: flex;
@@ -53,12 +53,13 @@ body, html {
     justify-content: center;
     position: relative;
     flex-direction: row;
+    opacity: 0; /* Start with sections hidden */
+    transition: opacity 1s ease-in-out; /* Fade transition */
 }
 
 /* The left part (2/3) with white background for text */
 .award-section .text {
     width: 66.67%;  /* Takes 2/3 of the screen */
-    background-color: white;
     padding: 20px;
     text-align: center;
 }
@@ -84,61 +85,22 @@ body, html {
     align-items: center;
 }
 
-/* 3rd place - white and gold gradient animation */
+/* Award Section Backgrounds */
 #third-place {
-    background: linear-gradient(45deg, white, gold);
-    background-size: 400% 400%;
-    animation: gradientMoveThird 5s linear infinite;
+    background-color: #cd7f32; /* Bronze */
 }
 
-@keyframes gradientMoveThird {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 0%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
-}
-
-#third-place .model-container model-viewer {
-    width: 80%;
-    height: 80%;
-}
-
-/* 2nd place - white and gold gradient animation */
 #second-place {
-    background: linear-gradient(45deg, white, gold);
-    background-size: 400% 400%;
-    animation: gradientMoveSecond 5s linear infinite;
+    background-color: #c0c0c0; /* Silver */
 }
 
-@keyframes gradientMoveSecond {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 0%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
-}
-
-#second-place .model-container model-viewer {
-    width: 80%;
-    height: 80%;
-}
-
-/* 1st place - white and gold gradient animation */
 #first-place {
-    background: linear-gradient(45deg, white, gold);
-    background-size: 400% 400%;
-    animation: gradientMoveFirst 5s linear infinite;
+    background-color: #ffd700; /* Gold */
 }
 
-@keyframes gradientMoveFirst {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 0%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
-}
-
+/* Model Viewer Sizes */
+#third-place .model-container model-viewer,
+#second-place .model-container model-viewer,
 #first-place .model-container model-viewer {
     width: 80%;
     height: 80%;
@@ -188,4 +150,9 @@ body, html {
     .scroll-icon {
         font-size: 24px;  /* Smaller scroll icon */
     }
+}
+
+/* Add visible class on scroll */
+.award-section.visible {
+    opacity: 1;
 }
