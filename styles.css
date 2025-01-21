@@ -7,11 +7,10 @@ body, html {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Main page - gradient background */
+/* Main page - gold and black gradient */
 .main-page {
-    background: linear-gradient(45deg, #FFFFFF, #000000, #E69DE8, #771797, #290543);
-    background-size: 400% 400%; /* Make the gradient larger for a smoother effect */
-    animation: gradientMove 5s linear infinite; /* Faster movement (5s) */
+    background: linear-gradient(45deg, gold, black);
+    animation: gradientMove 5s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,26 +20,22 @@ body, html {
 }
 
 @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 0%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
+    0% { background: linear-gradient(45deg, gold, black); }
+    50% { background: linear-gradient(45deg, black, gold); }
+    100% { background: linear-gradient(45deg, gold, black); }
 }
 
-/* Logo */
 .logo {
-    width: 1200px;  /* Increased from 300px to 1200px */
+    width: 300px;
 }
 
-/* Scroll icon */
 .scroll-icon {
     font-size: 30px;
     margin-top: 20px;
     cursor: pointer;
 }
 
-/* Scroll icon hover effect */
+/* Scroll arrow animation */
 .scroll-icon:hover {
     transform: translateY(10px);
 }
@@ -52,12 +47,11 @@ body, html {
     align-items: center;
     justify-content: center;
     position: relative;
-    flex-direction: row;
 }
 
-/* The left part (2/3) with white background for text */
 .award-section .text {
     width: 66.67%;  /* Takes 2/3 of the screen */
+    background-color: white;
     padding: 20px;
     text-align: center;
 }
@@ -83,69 +77,32 @@ body, html {
     align-items: center;
 }
 
-/* Award section backgrounds */
+/* 3rd place - bronze and black gradient */
 #third-place {
-    background-color: #cd7f32; /* Bronze */
+    background: linear-gradient(45deg, #8c4d26, black);
 }
 
-#second-place {
-    background-color: #c0c0c0; /* Silver */
-}
-
-#first-place {
-    background-color: #ffd700; /* Gold */
-}
-
-/* Model Viewer Sizes */
-#third-place .model-container model-viewer,
-#second-place .model-container model-viewer,
-#first-place .model-container model-viewer {
+#third-place .model-container model-viewer {
     width: 80%;
     height: 80%;
 }
 
-/* Mobile Optimization */
-@media only screen and (max-width: 768px) {
-    /* Make the award section stack vertically */
-    .award-section {
-        flex-direction: column;  /* Stack the content vertically */
-    }
+/* 2nd place - silver and black gradient */
+#second-place {
+    background: linear-gradient(45deg, silver, black);
+}
 
-    /* Text section (white background) */
-    .award-section .text {
-        width: 100%;  /* Full width on mobile */
-        padding: 30px 20px;  /* More padding for better readability */
-    }
+#second-place .model-container model-viewer {
+    width: 80%;
+    height: 80%;
+}
 
-    .award-section h1 {
-        font-size: 2.5rem;  /* Slightly smaller for mobile */
-    }
+/* 1st place - gold and black gradient */
+#first-place {
+    background: linear-gradient(45deg, gold, black);
+}
 
-    .award-section h2 {
-        font-size: 2rem;  /* Slightly smaller for mobile */
-    }
-
-    /* Model container for the 3D model */
-    .award-section .model-container {
-        width: 100%;  /* Full width for the model on mobile */
-        height: 300px;  /* Set a fixed height to keep the model size good */
-    }
-
-    /* Model Viewer sizing on mobile */
-    #third-place .model-container model-viewer,
-    #second-place .model-container model-viewer,
-    #first-place .model-container model-viewer {
-        width: 90%;  /* Slightly smaller on mobile */
-        height: 90%;  /* Slightly smaller on mobile */
-    }
-
-    /* Ensure the logo on the main page isn't too big on mobile */
-    .logo {
-        width: 800px;  /* Increased from 200px to 800px */
-    }
-
-    /* Adjust scroll icon for mobile */
-    .scroll-icon {
-        font-size: 24px;  /* Smaller scroll icon */
-    }
+#first-place .model-container model-viewer {
+    width: 80%;
+    height: 80%;
 }
