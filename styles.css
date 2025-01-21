@@ -10,7 +10,7 @@ body, html {
 /* Main page - gold and black gradient animation */
 .main-page {
     background: linear-gradient(45deg, gold, black);
-    animation: gradientMove 5s linear infinite;
+    animation: gradientMove 15s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,9 +20,9 @@ body, html {
 }
 
 @keyframes gradientMove {
-    0% { background: linear-gradient(45deg, gold, black); }
-    50% { background: linear-gradient(45deg, black, gold); }
-    100% { background: linear-gradient(45deg, gold, black); }
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 /* Logo - 4x bigger size */
@@ -84,13 +84,14 @@ body, html {
 /* 3rd place - bronze and black gradient animation */
 #third-place {
     background: linear-gradient(45deg, #8c4d26, black);
-    animation: gradientMoveBronze 5s linear infinite;
+    background-size: 200% 200%;
+    animation: gradientMoveBronze 15s linear infinite;
 }
 
 @keyframes gradientMoveBronze {
-    0% { background: linear-gradient(45deg, #8c4d26, black); }
-    50% { background: linear-gradient(45deg, black, #8c4d26); }
-    100% { background: linear-gradient(45deg, #8c4d26, black); }
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 #third-place .model-container model-viewer {
@@ -101,13 +102,14 @@ body, html {
 /* 2nd place - silver and black gradient animation */
 #second-place {
     background: linear-gradient(45deg, silver, black);
-    animation: gradientMoveSilver 5s linear infinite;
+    background-size: 200% 200%;
+    animation: gradientMoveSilver 15s linear infinite;
 }
 
 @keyframes gradientMoveSilver {
-    0% { background: linear-gradient(45deg, silver, black); }
-    50% { background: linear-gradient(45deg, black, silver); }
-    100% { background: linear-gradient(45deg, silver, black); }
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 #second-place .model-container model-viewer {
@@ -118,13 +120,14 @@ body, html {
 /* 1st place - gold and black gradient animation */
 #first-place {
     background: linear-gradient(45deg, gold, black);
-    animation: gradientMoveGold 5s linear infinite;
+    background-size: 200% 200%;
+    animation: gradientMoveGold 15s linear infinite;
 }
 
 @keyframes gradientMoveGold {
-    0% { background: linear-gradient(45deg, gold, black); }
-    50% { background: linear-gradient(45deg, black, gold); }
-    100% { background: linear-gradient(45deg, gold, black); }
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 #first-place .model-container model-viewer {
