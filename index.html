@@ -4,47 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awards Website</title>
+    <!-- Link to your external CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Importing Model-Viewer for 3D models -->
+    <!-- Import Model Viewer -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
-    <div class="main-page">
-        <img src="moonsaultieslogo.png" alt="Moonsaulties Logo" class="logo">
-        <div class="scroll-icon">&#8595;</div>
+
+<!-- Main page with logo and scroll icon -->
+<div class="main-page">
+    <img src="moonsaultieslogo.png" alt="Logo" class="logo">
+    <span class="scroll-icon">&#x2193;</span> <!-- Scroll icon -->
+</div>
+
+<!-- 3rd Place Award Section -->
+<div id="third-place" class="award-section">
+    <div class="text">
+        <h1>EVENT OF THE YEAR</h1>
+        <h2>3RD PLACE</h2>
     </div>
-    
-    <!-- Event of the Year - 3rd Place -->
-    <section class="award-section" id="third-place">
-        <div class="text">
-            <h1>EVENT OF THE YEAR</h1>
-            <h2>3RD PLACE</h2>
-        </div>
-        <div class="model-container">
-            <model-viewer src="card1.glb" alt="3D Model for 3rd Place" camera-controls></model-viewer>
-        </div>
-    </section>
+    <div class="model-container">
+        <model-viewer src="path/to/card1.glb" alt="3D Model" camera-controls></model-viewer>
+        <span class="rotate-icon">&#8635;</span> <!-- Rotating arrow -->
+    </div>
+</div>
 
-    <!-- Event of the Year - 2nd Place -->
-    <section class="award-section" id="second-place">
-        <div class="text">
-            <h1>EVENT OF THE YEAR</h1>
-            <h2>2ND PLACE</h2>
-        </div>
-        <div class="model-container">
-            <model-viewer src="card2.glb" alt="3D Model for 2nd Place" camera-controls></model-viewer>
-        </div>
-    </section>
+<!-- 2nd Place Award Section -->
+<div id="second-place" class="award-section">
+    <div class="text">
+        <h1>EVENT OF THE YEAR</h1>
+        <h2>2ND PLACE</h2>
+    </div>
+    <div class="model-container">
+        <model-viewer src="path/to/card2.glb" alt="3D Model" camera-controls></model-viewer>
+        <span class="rotate-icon">&#8635;</span> <!-- Rotating arrow -->
+    </div>
+</div>
 
-    <!-- Event of the Year - 1st Place -->
-    <section class="award-section" id="first-place">
-        <div class="text">
-            <h1>EVENT OF THE YEAR</h1>
-            <h2>1ST PLACE</h2>
-        </div>
-        <div class="model-container">
-            <model-viewer src="card3.glb" alt="3D Model for 1st Place" camera-controls></model-viewer>
-        </div>
-    </section>
+<!-- 1st Place Award Section -->
+<div id="first-place" class="award-section">
+    <div class="text">
+        <h1>EVENT OF THE YEAR</h1>
+        <h2>1ST PLACE</h2>
+    </div>
+    <div class="model-container">
+        <model-viewer src="path/to/card3.glb" alt="3D Model" camera-controls></model-viewer>
+        <span class="rotate-icon">&#8635;</span> <!-- Rotating arrow -->
+    </div>
+</div>
+
 </body>
 </html>
