@@ -7,7 +7,7 @@ body, html {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Main page - gold and black gradient */
+/* Main page - gold and black gradient animation */
 .main-page {
     background: linear-gradient(45deg, gold, black);
     animation: gradientMove 5s linear infinite;
@@ -49,6 +49,7 @@ body, html {
     position: relative;
 }
 
+/* The left part (2/3) with white background for text */
 .award-section .text {
     width: 66.67%;  /* Takes 2/3 of the screen */
     background-color: white;
@@ -77,9 +78,16 @@ body, html {
     align-items: center;
 }
 
-/* 3rd place - bronze and black gradient */
+/* 3rd place - bronze and black gradient animation */
 #third-place {
     background: linear-gradient(45deg, #8c4d26, black);
+    animation: gradientMoveBronze 5s linear infinite;
+}
+
+@keyframes gradientMoveBronze {
+    0% { background: linear-gradient(45deg, #8c4d26, black); }
+    50% { background: linear-gradient(45deg, black, #8c4d26); }
+    100% { background: linear-gradient(45deg, #8c4d26, black); }
 }
 
 #third-place .model-container model-viewer {
@@ -87,9 +95,16 @@ body, html {
     height: 80%;
 }
 
-/* 2nd place - silver and black gradient */
+/* 2nd place - silver and black gradient animation */
 #second-place {
     background: linear-gradient(45deg, silver, black);
+    animation: gradientMoveSilver 5s linear infinite;
+}
+
+@keyframes gradientMoveSilver {
+    0% { background: linear-gradient(45deg, silver, black); }
+    50% { background: linear-gradient(45deg, black, silver); }
+    100% { background: linear-gradient(45deg, silver, black); }
 }
 
 #second-place .model-container model-viewer {
@@ -97,9 +112,16 @@ body, html {
     height: 80%;
 }
 
-/* 1st place - gold and black gradient */
+/* 1st place - gold and black gradient animation */
 #first-place {
     background: linear-gradient(45deg, gold, black);
+    animation: gradientMoveGold 5s linear infinite;
+}
+
+@keyframes gradientMoveGold {
+    0% { background: linear-gradient(45deg, gold, black); }
+    50% { background: linear-gradient(45deg, black, gold); }
+    100% { background: linear-gradient(45deg, gold, black); }
 }
 
 #first-place .model-container model-viewer {
