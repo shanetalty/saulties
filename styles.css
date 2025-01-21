@@ -25,17 +25,19 @@ body, html {
     100% { background: linear-gradient(45deg, gold, black); }
 }
 
+/* Logo - 4x bigger size */
 .logo {
-    width: 300px;
+    width: 1200px;  /* Increased from 300px to 1200px */
 }
 
+/* Scroll icon */
 .scroll-icon {
     font-size: 30px;
     margin-top: 20px;
     cursor: pointer;
 }
 
-/* Scroll arrow animation */
+/* Scroll icon hover effect */
 .scroll-icon:hover {
     transform: translateY(10px);
 }
@@ -167,7 +169,7 @@ body, html {
 
     /* Ensure the logo on the main page isn't too big on mobile */
     .logo {
-        width: 200px;
+        width: 800px;  /* Increased from 200px to 800px */
     }
 
     /* Adjust scroll icon for mobile */
