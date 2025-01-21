@@ -4,7 +4,6 @@ body {
   padding: 0;
   font-family: 'Helvetica Neue', sans-serif;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 /* Home Page */
@@ -105,7 +104,6 @@ body {
   width: 66%;
   height: 100%;
   position: relative;
-  background: linear-gradient(45deg, #a52a2a, #000);
   padding: 20px;
 }
 
@@ -114,6 +112,20 @@ model-viewer {
   height: 100%;
 }
 
+/* Gradient Backgrounds for Places */
+#event-of-the-year-3rd .model-content {
+  background: linear-gradient(45deg, #a52a2a, #000); /* Bronze, Black */
+}
+
+#event-of-the-year-2nd .model-content {
+  background: linear-gradient(45deg, #c0c0c0, #000); /* Silver, Black */
+}
+
+#event-of-the-year-1st .model-content {
+  background: linear-gradient(45deg, #ffd700, #000); /* Gold, Black */
+}
+
+/* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
   bottom: 20px;
@@ -126,13 +138,4 @@ model-viewer {
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
-}
-
-/* Scroll Locking */
-html {
-  scroll-snap-type: y mandatory;
-}
-
-section {
-  scroll-snap-align: start;
 }
