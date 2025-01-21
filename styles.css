@@ -47,6 +47,7 @@ body, html {
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-direction: row;
 }
 
 /* The left part (2/3) with white background for text */
@@ -127,4 +128,50 @@ body, html {
 #first-place .model-container model-viewer {
     width: 80%;
     height: 80%;
+}
+
+/* Mobile Optimization */
+@media only screen and (max-width: 768px) {
+    /* Make the award section stack vertically */
+    .award-section {
+        flex-direction: column;  /* Stack the content vertically */
+    }
+
+    /* Text section (white background) */
+    .award-section .text {
+        width: 100%;  /* Full width on mobile */
+        padding: 30px 20px;  /* More padding for better readability */
+    }
+
+    .award-section h1 {
+        font-size: 2.5rem;  /* Slightly smaller for mobile */
+    }
+
+    .award-section h2 {
+        font-size: 2rem;  /* Slightly smaller for mobile */
+    }
+
+    /* Model container for the 3D model */
+    .award-section .model-container {
+        width: 100%;  /* Full width for the model on mobile */
+        height: 300px;  /* Set a fixed height to keep the model size good */
+    }
+
+    /* Model Viewer sizing on mobile */
+    #third-place .model-container model-viewer,
+    #second-place .model-container model-viewer,
+    #first-place .model-container model-viewer {
+        width: 90%;  /* Slightly smaller on mobile */
+        height: 90%;  /* Slightly smaller on mobile */
+    }
+
+    /* Ensure the logo on the main page isn't too big on mobile */
+    .logo {
+        width: 200px;
+    }
+
+    /* Adjust scroll icon for mobile */
+    .scroll-icon {
+        font-size: 24px;  /* Smaller scroll icon */
+    }
 }
