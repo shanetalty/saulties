@@ -5,39 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wrestling Awards</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Import model-viewer component -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
-  <div class="page">
-    <h1>MEN'S WRESTLER OF THE YEAR</h1>
-    <model-viewer id="card1" src="/card1.glb" alt="Men's Wrestler of the Year" 
-                  shadow-intensity="1">
-    </model-viewer>
-    <div class="scroll-indicator">↓</div>
-  </div>
-  <div class="page">
-    <h1>WOMEN'S WRESTLER OF THE YEAR</h1>
-    <model-viewer id="card2" src="/card2.glb" alt="Women's Wrestler of the Year" 
-                  shadow-intensity="1">
-    </model-viewer>
-    <div class="scroll-indicator">↓</div>
-  </div>
-  <div class="page">
-    <h1>MATCH OF THE YEAR</h1>
-    <model-viewer id="card3" src="/card3.glb" alt="Match of the Year" 
-                  shadow-intensity="1">
-    </model-viewer>
-    <div class="scroll-indicator">↓</div>
-  </div>
-  <div class="page">
-    <h1>EVENT OF THE YEAR</h1>
-    <model-viewer id="card4" src="/card4.glb" alt="Event of the Year" 
-                  shadow-intensity="1">
-    </model-viewer>
-    <div class="scroll-indicator">↓</div>
-  </div>
-  <!-- Link the script -->
+  <!-- Home Page -->
+  <section class="home-page">
+    <div class="background"></div>
+    <h1 class="title">Wrestling Awards</h1>
+    <div class="categories">
+      <button class="category-btn" onclick="scrollToSection('event-of-the-year')">Event of the Year</button>
+      <button class="category-btn">Men's Wrestler of the Year</button>
+      <button class="category-btn">Women's Wrestler of the Year</button>
+      <button class="category-btn">Company of the Year</button>
+    </div>
+  </section>
+
+  <!-- Event of the Year Page (Proof of Concept) -->
+  <section id="event-of-the-year" class="award-page">
+    <div class="page-content">
+      <div class="text-content">
+        <h2>EVENT OF THE YEAR</h2>
+        <h3>3RD PLACE</h3>
+      </div>
+      <div class="model-content">
+        <model-viewer id="event-model" src="/card1.glb" alt="Event of the Year Model" camera-controls shadow-intensity="1"></model-viewer>
+      </div>
+    </div>
+    <div class="scroll-indicator" onclick="scrollToNextSection()">↓</div>
+  </section>
+
+  <!-- Add other sections for second and third place (event of the year) here... -->
+  <!-- Placeholder: Men's Wrestler, Women's Wrestler, Company of the Year, etc. -->
+
   <script src="script.js"></script>
 </body>
 </html>
