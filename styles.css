@@ -10,8 +10,8 @@ body, html {
 /* Main page - gradient background */
 .main-page {
     background: linear-gradient(45deg, #FFFFFF, #000000, #E69DE8, #771797, #290543);
-    background-size: 400% 400%;
-    animation: gradientMove 5s linear infinite;
+    background-size: 400% 400%; /* Make the gradient larger for a smoother effect */
+    animation: gradientMove 5s linear infinite; /* Faster movement (5s) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,31 +29,31 @@ body, html {
     100% { background-position: 0% 50%; }
 }
 
-/* Logo styling */
+/* Make the logo 4x bigger */
 .logo {
-    width: 1200px;
-    animation: logoPulse 4s ease-in-out infinite;
+    width: 1200px; /* 4x bigger */
+    animation: logoPulse 4s ease-in-out infinite; /* Slower pulse */
 }
 
-/* Animation for subtle logo scaling */
+/* Animation for logo scaling (subtle effect) */
 @keyframes logoPulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
+    50% { transform: scale(1.02); } /* Reduced scaling */
     100% { transform: scale(1); }
 }
 
-/* Scroll icon styling */
 .scroll-icon {
     font-size: 30px;
     margin-top: 20px;
     cursor: pointer;
 }
 
+/* Scroll arrow animation */
 .scroll-icon:hover {
     transform: translateY(10px);
 }
 
-/* Award sections */
+/* Award section (full screen with 2/3 text and 1/3 model) */
 .award-section {
     display: flex;
     height: 100vh;
@@ -62,9 +62,9 @@ body, html {
     position: relative;
 }
 
-/* Text box styling */
+/* Text box */
 .award-section .text {
-    width: 66.67%;
+    width: 66.67%;  /* 2/3 of the screen */
     background-color: white;
     padding: 20px;
     text-align: center;
@@ -84,77 +84,37 @@ body, html {
 
 /* Model container */
 .award-section .model-container {
-    width: 33.33%; /* Maintain 1/3 screen width on desktop */
+    width: 33.33%;  /* 1/3 of the screen */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.award-section .model-container model-viewer {
-    width: 80%; /* Scale model to fill container */
+/* Award section colors */
+#third-place {
+    background-color: #8C4D26;  /* Solid bronze */
+}
+
+#third-place .model-container model-viewer {
+    width: 80%;
     height: 80%;
 }
 
-/* Award section colors */
-#third-place {
-    background-color: #8C4D26;
+#second-place {
+    background-color: #C0C0C0;  /* Solid silver */
 }
 
-#second-place {
-    background-color: #C0C0C0;
+#second-place .model-container model-viewer {
+    width: 80%;
+    height: 80%;
 }
 
 #first-place {
-    background-color: #DAA520;
+    background-color: #DAA520;  /* Richer gold */
 }
 
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-    /* Main page */
-    .main-page {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .logo {
-        width: 100%;
-        max-width: 300px; /* Smaller logo for mobile */
-    }
-
-    .scroll-icon {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-
-    /* Award sections */
-    .award-section {
-        flex-direction: column; /* Stack text and model vertically */
-        justify-content: flex-start; /* Align content at the top */
-        padding: 20px;
-    }
-
-    .award-section .text {
-        width: 100%;
-        margin-bottom: 20px; /* Add spacing below the text */
-    }
-
-    .award-section h1 {
-        font-size: 1.5rem;
-    }
-
-    .award-section h2 {
-        font-size: 1.2rem;
-    }
-
-    .award-section .model-container {
-        width: 100%; /* Model takes full width */
-        height: auto;
-        max-width: 400px; /* Limit size for smaller screens */
-    }
-
-    .award-section .model-container model-viewer {
-        width: 100%; /* Ensure the model fills the container */
-        height: auto;
-    }
+#first-place .model-container model-viewer {
+    width: 80%;
+    height: 80%;
 }
