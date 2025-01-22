@@ -97,8 +97,8 @@ body, html {
 }
 
 #third-place .model-container model-viewer {
-    width: 80%;
-    height: 80%;
+    width: 100%; /* Larger card */
+    height: 100%; /* Larger card */
 }
 
 #second-place {
@@ -106,8 +106,8 @@ body, html {
 }
 
 #second-place .model-container model-viewer {
-    width: 80%;
-    height: 80%;
+    width: 100%; /* Larger card */
+    height: 100%; /* Larger card */
 }
 
 #first-place {
@@ -115,6 +115,6 @@ body, html {
 }
 
 #first-place .model-container model-viewer {
-    width: 80%;
-    height: 80%;
+    width: 100%; /* Larger card */
+    height: 100%; /* Larger card */
 }
